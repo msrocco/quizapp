@@ -39,12 +39,12 @@ export function History() {
   function handleRemove(id: string, index: number) {
     swipeableRefs.current?.[index].close();
 
-    Alert.alert("Remover", "Deseja remover esse registro?", [
+    Alert.alert("Remove", "Do you want to remove this record?", [
       {
-        text: "Sim",
+        text: "Yes",
         onPress: () => remove(id),
       },
-      { text: "Não", style: "cancel" },
+      { text: "No", style: "cancel" },
     ]);
   }
 
@@ -59,8 +59,8 @@ export function History() {
   return (
     <View style={styles.container}>
       <Header
-        title="Histórico"
-        subtitle={`Seu histórico de estudos${"\n"}realizados`}
+        title="History"
+        subtitle={`Your history of studies${"\n"}carried out`}
         icon={HouseLine}
         onPress={goBack}
       />

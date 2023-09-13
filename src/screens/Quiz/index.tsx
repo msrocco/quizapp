@@ -49,7 +49,7 @@ export function Quiz() {
   const { id } = route.params as Params;
 
   function handleSkipConfirm() {
-    Alert.alert("Pular", "Deseja realmente pular a questão?", [
+    Alert.alert("Skip", "Do you really want to skip the question?", [
       { text: "Sim", onPress: () => handleNextQuestion() },
       { text: "Não", onPress: () => {} },
     ]);
@@ -93,13 +93,13 @@ export function Quiz() {
   }
 
   function handleStop() {
-    Alert.alert("Parar", "Deseja parar agora?", [
+    Alert.alert("Stop", "Do you want to stop now?", [
       {
-        text: "Não",
+        text: "No",
         style: "cancel",
       },
       {
-        text: "Sim",
+        text: "Yes",
         style: "destructive",
         onPress: () => navigate("home"),
       },
@@ -214,7 +214,7 @@ export function Quiz() {
         </Animated.View>
 
         <View style={styles.footer}>
-          <OutlineButton title="Parar" onPress={handleStop} />
+          <OutlineButton title="Stop" onPress={handleStop} />
           <ConfirmButton onPress={handleConfirm} />
         </View>
       </Animated.ScrollView>
