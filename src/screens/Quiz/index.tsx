@@ -212,7 +212,6 @@ export function Quiz() {
   }, []);
 
   useEffect(() => {
-    console.log(points);
     if (quiz.questions) {
       handleNextQuestion();
     }
